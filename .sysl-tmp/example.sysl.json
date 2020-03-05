@@ -1,0 +1,218 @@
+{
+ "apps": {
+  "hello": {
+   "name": {
+    "part": [
+     "hello"
+    ]
+   },
+   "attrs": {
+    "package": {
+     "s": "hello"
+    },
+    "patterns": {
+     "a": {
+      "elt": [
+       {
+        "s": "nowrap"
+       }
+      ]
+     }
+    }
+   },
+   "endpoints": {
+    "ListMe": {
+     "name": "ListMe",
+     "param": [
+      {
+       "name": "request",
+       "type": {
+        "typeRef": {
+         "ref": {
+          "appname": {
+           "part": [
+            "Request"
+           ]
+          }
+         }
+        }
+       }
+      }
+     ],
+     "stmt": [
+      {
+       "ret": {
+        "payload": "ok \u003c: Response"
+       }
+      }
+     ],
+     "sourceContext": {
+      "file": "/tests/example.sysl",
+      "start": {
+       "line": 6,
+       "col": 4
+      }
+     }
+    },
+    "MayI": {
+     "name": "MayI",
+     "param": [
+      {
+       "name": "request",
+       "type": {
+        "typeRef": {
+         "ref": {
+          "appname": {
+           "part": [
+            "Request"
+           ]
+          }
+         }
+        }
+       }
+      }
+     ],
+     "stmt": [
+      {
+       "ret": {
+        "payload": "ok \u003c: Response"
+       }
+      }
+     ],
+     "sourceContext": {
+      "file": "/tests/example.sysl",
+      "start": {
+       "line": 3,
+       "col": 4
+      }
+     }
+    }
+   },
+   "types": {
+    "Request": {
+     "tuple": {
+      "attrDefs": {
+       "account_id": {
+        "primitive": "STRING",
+        "attrs": {
+         "json_tag": {
+          "s": "account_id"
+         },
+         "rpcId": {
+          "s": "3"
+         }
+        },
+        "constraint": [
+        ],
+        "sourceContext": {
+         "start": {
+          "line": 18
+         }
+        }
+       },
+       "operation": {
+        "primitive": "STRING",
+        "attrs": {
+         "json_tag": {
+          "s": "operation"
+         },
+         "rpcId": {
+          "s": "2"
+         }
+        },
+        "constraint": [
+        ],
+        "sourceContext": {
+         "start": {
+          "line": 15
+         }
+        }
+       },
+       "user_id": {
+        "primitive": "STRING",
+        "attrs": {
+         "json_tag": {
+          "s": "user_id"
+         },
+         "rpcId": {
+          "s": "1"
+         }
+        },
+        "constraint": [
+        ],
+        "sourceContext": {
+         "start": {
+          "line": 12
+         }
+        }
+       }
+      }
+     },
+     "sourceContext": {
+      "file": "/tests/example.sysl",
+      "start": {
+       "line": 9,
+       "col": 4
+      }
+     }
+    },
+    "Response": {
+     "tuple": {
+      "attrDefs": {
+       "reason": {
+        "primitive": "STRING",
+        "attrs": {
+         "json_tag": {
+          "s": "reason"
+         },
+         "rpcId": {
+          "s": "2"
+         }
+        },
+        "constraint": [
+        ],
+        "sourceContext": {
+         "start": {
+          "line": 26
+         }
+        }
+       },
+       "you_may": {
+        "primitive": "BOOL",
+        "attrs": {
+         "json_tag": {
+          "s": "you_may"
+         },
+         "rpcId": {
+          "s": "1"
+         }
+        },
+        "constraint": [
+        ],
+        "sourceContext": {
+         "start": {
+          "line": 23
+         }
+        }
+       }
+      }
+     },
+     "sourceContext": {
+      "file": "/tests/example.sysl",
+      "start": {
+       "line": 20,
+       "col": 4
+      }
+     }
+    }
+   },
+   "sourceContext": {
+    "file": "/tests/example.sysl",
+    "start": {
+     "line": 1,
+     "col": 1
+    }
+   }
+  }
+ }
+}
